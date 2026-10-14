@@ -1,5 +1,7 @@
 package tn.esprit.autolocapi.service;
 
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.autolocapi.domain.Vehicule;
 import tn.esprit.autolocapi.repository.VehiculeRepository;
@@ -7,13 +9,16 @@ import tn.esprit.autolocapi.repository.VehiculeRepository;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
+
 public class VehiculeService implements IVehiculeService {
 
-    private final VehiculeRepository vehiculeRepository;
+    /*@Autowired
+    private VehiculeRepository vehiculeRepository;*/
+    private VehiculeRepository vehiculeRepository;
 
-    public VehiculeService(VehiculeRepository vehiculeRepository) {
-        this.vehiculeRepository = vehiculeRepository;
-    }
+
+
 
     @Override
     public Vehicule ajouterVehicule(Vehicule vehicule) {
@@ -33,5 +38,10 @@ public class VehiculeService implements IVehiculeService {
     @Override
     public List<Vehicule> getAllVehicules() {
         return vehiculeRepository.findAll();
+    }
+
+    @Override
+    public void supprimerVehiculeByID(Long id) {
+
     }
 }

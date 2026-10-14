@@ -12,4 +12,6 @@ public interface IVehiculeService {
     public Vehicule getVehiculeById(Long id);
 
     public List<Vehicule> getAllVehicules();
+
+    public void supprimerVehiculeByID(Long id);
 }
