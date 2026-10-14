@@ -4,11 +4,11 @@ import org.springframework.stereotype.Service;
 import tn.esprit.autolocapi.repository.ReservationRepository;
 
 @Service
-public class ReservationService {
+public class ReservationService implements IReservationService {
 
-    private final ReservationRepository Repository;
+    private final ReservationRepository reservationRepository;
 
-    public ReservationService(ReservationRepository Repository) {
-        this.Repository = Repository;
+    public ReservationService(ReservationRepository reservationRepository) {
+        this.reservationRepository = reservationRepository;
     }
 }

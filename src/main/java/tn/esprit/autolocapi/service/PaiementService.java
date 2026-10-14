@@ -4,11 +4,11 @@ import org.springframework.stereotype.Service;
 import tn.esprit.autolocapi.repository.PaiementRepository;
 
 @Service
-public class PaiementService {
+public class PaiementService implements IPaiementService {
 
-    private final PaiementRepository Repository;
+    private final PaiementRepository paiementRepository;
 
-    public PaiementService(PaiementRepository Repository) {
-        this.Repository = Repository;
+    public PaiementService(PaiementRepository paiementRepository) {
+        this.paiementRepository = paiementRepository;
     }
 }

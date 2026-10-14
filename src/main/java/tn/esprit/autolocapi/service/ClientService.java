@@ -4,11 +4,11 @@ import org.springframework.stereotype.Service;
 import tn.esprit.autolocapi.repository.ClientRepository;
 
 @Service
-public class ClientService {
+public class ClientService implements IClientService {
 
-    private final ClientRepository Repository;
+    private final ClientRepository clientRepository;
 
-    public ClientService(ClientRepository Repository) {
-        this.Repository = Repository;
+    public ClientService(ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
     }
 }

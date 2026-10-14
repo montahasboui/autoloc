@@ -4,11 +4,11 @@ import org.springframework.stereotype.Service;
 import tn.esprit.autolocapi.repository.MaintenanceRepository;
 
 @Service
-public class MaintenanceService {
+public class MaintenanceService implements IMaintenanceService {
 
-    private final MaintenanceRepository Repository;
+    private final MaintenanceRepository maintenanceRepository;
 
-    public MaintenanceService(MaintenanceRepository Repository) {
-        this.Repository = Repository;
+    public MaintenanceService(MaintenanceRepository maintenanceRepository) {
+        this.maintenanceRepository = maintenanceRepository;
     }
 }

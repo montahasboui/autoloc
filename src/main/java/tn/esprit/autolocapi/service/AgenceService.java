@@ -4,11 +4,11 @@ import org.springframework.stereotype.Service;
 import tn.esprit.autolocapi.repository.AgenceRepository;
 
 @Service
-public class AgenceService {
+public class AgenceService implements IAgenceService {
 
-    private final AgenceRepository Repository;
+    private final AgenceRepository agenceRepository;
 
-    public AgenceService(AgenceRepository Repository) {
-        this.Repository = Repository;
+    public AgenceService(AgenceRepository agenceRepository) {
+        this.agenceRepository = agenceRepository;
     }
 }

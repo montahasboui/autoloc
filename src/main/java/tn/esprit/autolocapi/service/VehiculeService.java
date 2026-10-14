@@ -4,11 +4,11 @@ import org.springframework.stereotype.Service;
 import tn.esprit.autolocapi.repository.VehiculeRepository;
 
 @Service
-public class VehiculeService {
+public class VehiculeService implements IVehiculeService {
 
-    private final VehiculeRepository Repository;
+    private final VehiculeRepository vehiculeRepository;
 
-    public VehiculeService(VehiculeRepository Repository) {
-        this.Repository = Repository;
+    public VehiculeService(VehiculeRepository vehiculeRepository) {
+        this.vehiculeRepository = vehiculeRepository;
     }
 }

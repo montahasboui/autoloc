@@ -4,11 +4,11 @@ import org.springframework.stereotype.Service;
 import tn.esprit.autolocapi.repository.ContratRepository;
 
 @Service
-public class ContratService {
+public class ContratService implements IContratService {
 
-    private final ContratRepository Repository;
+    private final ContratRepository contratRepository;
 
-    public ContratService(ContratRepository Repository) {
-        this.Repository = Repository;
+    public ContratService(ContratRepository contratRepository) {
+        this.contratRepository = contratRepository;
     }
 }
